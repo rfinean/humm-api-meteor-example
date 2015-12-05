@@ -23,9 +23,5 @@ fourseven:scss
 underscore
 iron:router
 reactive-var
-meteorhacks:npm
-
-
-npm-container
 humm:humm
 twbs:bootstrap
