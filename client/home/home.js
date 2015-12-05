@@ -8,6 +8,9 @@ Template.home.onCreated(function () {
 
 });
 
+
+
+
 Template.home.helpers({
     loggedViaCode: function loggedViaCode(){
         return Template.instance().loggedViaCode.get();

@@ -3,11 +3,14 @@ Template.profile.onCreated(function () {
     this.userLoaded = new ReactiveVar(false);
     this.meViaCode = {};
     var that = this;
-    
+
     console.log(this.data);
     Meteor.call('getMe', this.data, function(err, res){
             that.userLoaded.set(true);
-            that.meViaCode = res.data.data_response;       
+            that.meViaCode = res.data.data_response;
+
+            Session.set('currentUser', res.data.data_response);
+            
     });
 });
 
@@ -63,18 +66,13 @@ Template.profile.events({
         var done = false;
         onPlayerStateChange = function(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
+          setTimeout(stopVideo, 10000);
           done = true;
         }
         };
         stopVideo = function() {
-        player.stopVideo();
+            player.stopVideo();
         };
-
-
-
-
-
 
         // Meteor.call('getSongById', '557ecbf86a64fc1b8bed533f', function(err, res) {
         //     console.log(res);
