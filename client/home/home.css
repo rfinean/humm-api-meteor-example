@@ -1,0 +1,28 @@
+.home {
+	background: url('/img/earth.jpg') no-repeat center center;
+  	height: 100%;
+  	background-size: cover;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.home h1 {
+	font-size: 45px;
+	color: white;
+	font-weight:900;
+	text-shadow: 0px 0px 3px #000;
+}
+
+.home h4 {
+	font-size: 25px;
+	color: white;
+	font-weight:900;
+	text-shadow: 0px 0px 5px #000;
+}
+
+.home a {
+	min-width: 200px;
+}
+

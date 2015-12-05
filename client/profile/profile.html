@@ -1,0 +1,20 @@
+<template name="profile">
+
+	<div class="profile">
+		<div>	
+			{{#if userLoaded}}
+
+        		<h2> Me </h2>
+        		<h3>Logged in as {{ meViaCode.account.email }}</h3>
+		        <img src="{{meViaCode.account.uavatar}}">
+		        <p>{{meViaCode.account.uname}}</p>
+		        <p>{{meViaCode.account.email}}</p>
+		        <p>{{meViaCode.account.bio}}</p>
+
+		    {{else}}
+		        loading user
+		    {{/if}}
+		</div>
+	</div>
+
+</template>

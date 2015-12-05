@@ -4,7 +4,7 @@ Meteor.methods({
      * Get user using the code
      * @param code
      */
-    getMe: function getMe(code){
+    authMe: function authMe(code){
         /**
          * this will allow the next available DDP message to process without waiting for the current method.
          */
@@ -20,12 +20,22 @@ Meteor.methods({
         //get access using code
         var res = humm.accessViaCodeGrant(code);
         console.log(res);
+        return res.data.access_token;
+
+       /* console.log(res);
         if(!res.error && res.data){
             //set token before request
             humm.setAccessToken(res.data.access_token);
             //request logged in user
             return humm.users.me();
-        }
+        }*/
+    },
+    getMe: function(token) {
+
+          //set token before request
+        humm.setAccessToken(token);
+            //request logged in user
+        return humm.users.me();   
     },
 
     /**

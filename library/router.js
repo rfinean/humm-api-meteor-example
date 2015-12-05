@@ -1,14 +1,25 @@
 Router.route('/', {
     action: function () {
-        this.render('humm');
+        this.render('home');
     },
-    name: 'humm'
+    name: 'home'
 });
 
 Router.route('/complete-auth', {
     action: function () {
         humm.completeAuthorization(window.location);
     }
+});
+
+Router.route('/profile/:_id', {
+    action: function () {
+        this.render('profile');
+    },
+    data: function(){
+        var userID = this.params._id;
+        return userID;
+    },
+    name: 'profile'
 });
 
 

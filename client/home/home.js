@@ -1,5 +1,5 @@
 
-Template.humm.onCreated(function () {
+Template.home.onCreated(function () {
     this.loggedViaCode = new ReactiveVar(false);
     this.meViaCode = {};
 
@@ -8,7 +8,7 @@ Template.humm.onCreated(function () {
 
 });
 
-Template.humm.helpers({
+Template.home.helpers({
     loggedViaCode: function loggedViaCode(){
         return Template.instance().loggedViaCode.get();
     },
@@ -26,7 +26,7 @@ Template.humm.helpers({
     }
 });
 
-Template.humm.events({
+Template.home.events({
     'click #login-via-auth-code': function loginViaCode(event, template){
         console.log('------------------- Starting Auth via auth code follow ------------------- ');
         console.log(humm);
@@ -41,38 +41,18 @@ Template.humm.events({
             console.log(response);
 
             //once the user is logged in and we have a code we can call
-            Meteor.call('getMe', response.code, function(err, res) {
-                console.log(err);
+            Meteor.call('authMe', response.code, function(err, res) {
+
+                    console.log("res");
+                    Router.go('/profile/'+ res);
+
+/*                console.log(err);
                 console.log(res);
                 template.loggedViaCode.set(true);
                 template.meViaCode = res.data.data_response;
+*/
             })
         });
-    },
-
-    'click #login-via-implicit-grant': function loginViaImplicitGrant(event, template){
-        console.log('------------------- Starting Auth via implicit grant follow ------------------- ');
-
-        // init humm  with client_id
-        humm.init({ client_id: '56630fadae8c5007388b456c' });
-
-        //show pop up to enable user to login to hum
-        humm.authViaImplicitGrant(function(error, response) {
-            console.log('------------- authViaImplicitGrant complete -------------');
-            console.log(error);
-            console.log(response);
-
-            //show pop up to enable user to login to hum
-            humm.users.me(function(error, response) {
-                console.log('------------- user.me() complete -------------');
-                console.log(error);
-                console.log(response);
-                template.loggedViaImplicit.set(true);
-                console.log(response.data_response);
-                template.meViaImplicit = response.data_response;
-            });
-        });
-
     },
 
     'click #login-via-client-cred': function authViaClientCredentials() {

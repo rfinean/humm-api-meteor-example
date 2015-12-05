@@ -1,0 +1,11 @@
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+   font-family: monospace;
+}
+#body {
+   padding-top:10px;
+   padding-bottom:30px;   /* Height of the footer */
+   height: 100%;
+}
