@@ -14,7 +14,7 @@ Meteor.methods({
         console.log('--------------------- users.me()----------');
 
         humm.init({
-            client_id: '56570bacae8c5087411778a3', client_secret: 'CdNX3TcLc/OF3k2oIogwlBi/rCZOP0LSfLxrRjoX5EA='
+            client_id: '56630fadae8c5007388b456c', client_secret: 'c36d2a00efa76f881c6dbfb3caa66e9bfadc71214c83e3320ad6d66c5c7fde34'
         });
 
         //get access using code
@@ -36,7 +36,7 @@ Meteor.methods({
     getSongById: function getSongById(songId) {
 
         humm.init({
-            client_id: '56570bacae8c5087411778a3', client_secret: 'CdNX3TcLc/OF3k2oIogwlBi/rCZOP0LSfLxrRjoX5EA='
+            client_id: '56630fadae8c5007388b456c', client_secret: 'c36d2a00efa76f881c6dbfb3caa66e9bfadc71214c83e3320ad6d66c5c7fde34'
         });
         var authRes = humm.authViaClientCredentials();
         //credentials

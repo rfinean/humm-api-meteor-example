@@ -32,7 +32,7 @@ Template.humm.events({
         console.log(humm);
 
         // init humm  with client_id
-        humm.init({ client_id: '56570bacae8c5087411778a3' });
+        humm.init({ client_id: '56630fadae8c5007388b456c' });
 
         //show pop up to enable user to login to hum
         humm.authViaCodeGrant(function(error, response) {
@@ -54,7 +54,7 @@ Template.humm.events({
         console.log('------------------- Starting Auth via implicit grant follow ------------------- ');
 
         // init humm  with client_id
-        humm.init({ client_id: '56570bacae8c5087411778a3' });
+        humm.init({ client_id: '56630fadae8c5007388b456c' });
 
         //show pop up to enable user to login to hum
         humm.authViaImplicitGrant(function(error, response) {
