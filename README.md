@@ -1,30 +1,17 @@
-# Humm Accounts Authentication Examples for humm meteor package 
+# HummRinger 
 
-This project contains basic demos showing the different OAuth 2.0 flows for [authenticating against the Humm Web API](http://developers.myhumm.com/web/auth-guide) using Humm meteor package (https://atmospherejs.com/humm/humm).
+The classic radio song-intros competition, played amongst friends in a chatroom. Five seconds of a song intro is played and the contestants have to guess the artist before anyone else in the chatroom.
 
-These examples cover:
-
-* Authorization Code flow
-* Client Credentials flow
-* Implicit Grant flow
+* We use the [Humm Web API](http://developers.myhumm.com/web/auth-guide) and [Humm meteor package](https://atmospherejs.com/humm/humm) to source the music.
 
 ## Installation
 
-This an exmaple meteor project, [Get started with Meteor](https://www.meteor.com/install) you can find instructions on how to install it and get started. 
+This a meteor project, [see get started with Meteor](https://www.meteor.com/install) for instructions on how to install it and get started. You also need to install a Humm library:
+	
+	$  meteor add humm:humm
 
-## Running the examples
+## Running the server
 
     $  meteor
 
 Then, open `http:/127.0.0.1:3000` in a browser.
-
-### Using your own credentials
-The examples contains a working client ID and secret key. Note, however, that they might be rate limited if they are used frequently. If you are planning to create an application, we recommend you register your app and get your own credentials instead of using the ones in this project.
-
-Go to [My Applications on Humm Developer](http://accounts.livingindietv.com/apps) and create your application.
-
-For the examples, we registered these Redirect URIs:
-
-* 127.0.0.1:3000/complete-auth (used for implicit & auth code flow)
-
-Once you have created your app, replace the `client_id` and `client_secret` in the examples with the ones you get from My Applications.
