@@ -9,3 +9,7 @@ html, body {
    padding-bottom:30px;   /* Height of the footer */
    height: 100%;
 }
+#player {
+	width:0;
+	height:0;
+}
