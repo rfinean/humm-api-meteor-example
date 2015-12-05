@@ -51,7 +51,6 @@ Meteor.methods({
         var authRes = humm.authViaClientCredentials();
         //credentials
         console.log(authRes);
-        humm.setAccessToken(authRes.data.data_response.access_token);
         return humm.songs.get(songId);
     }
 });

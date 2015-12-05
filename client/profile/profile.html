@@ -4,15 +4,31 @@
 		<div>	
 			{{#if userLoaded}}
 
-        		<h2> Me </h2>
-        		<h3>Logged in as {{ meViaCode.account.email }}</h3>
-		        <img src="{{meViaCode.account.uavatar}}">
-		        <p>{{meViaCode.account.uname}}</p>
-		        <p>{{meViaCode.account.email}}</p>
-		        <p>{{meViaCode.account.bio}}</p>
+				<center>
+	        		<h2> Me </h2>
+	        		<h3>Logged in as {{ meViaCode.account.email }}</h3>
+			        <img src="{{meViaCode.account.uavatar}}">
+			        <p>{{meViaCode.account.uname}}</p>
+			        <p>{{meViaCode.account.email}}</p>
+			        <p>{{meViaCode.account.bio}}</p>
+
+			        <br>
+			        <br>
+			        <br>
+
+			        <button class="btn btn-danger" id="request-song">Play Song</button>
+
+			        <div id="player"></div>
+
+
+			        <h1 id="song-playing">Guess the Track!!</h1>
+
+			    </center>
+
+
 
 		    {{else}}
-		        loading user
+		        <center>Unable to load user...</center>
 		    {{/if}}
 		</div>
 	</div>
