@@ -4,18 +4,11 @@
 
 		<h1>HummRinger</h1>
 
-		<h4>The HummDinger of Music Games</h4>
+		<h4>A humdinger of a song intros game</h4>
 
 		<div>	
 			{{#if loggedViaCode}}
-
-        		<h2> Me </h2>
-        		<h3>Logged in as {{ meViaCode.account.email }}</h3>
-		        <img src="{{meViaCode.account.uavatar}}">
-		        <p>{{meViaCode.account.uname}}</p>
-		        <p>{{meViaCode.account.email}}</p>
-		        <p>{{meViaCode.account.bio}}</p>
-
+				<script>window.location.href = '/profile/' + '{{meViaCode.account.uname}}';</script>
 		    {{else}}
 		        <button class="btn btn-info" id="login-via-auth-code"> Log in using Humm</button>
 		    {{/if}}

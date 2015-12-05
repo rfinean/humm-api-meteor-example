@@ -4,6 +4,16 @@ html, body {
    height:100%;
    font-family: monospace;
 }
+.profile {
+	background: url('/img/angrynipper.jpg') no-repeat center center;
+  	height: 100%;
+  	background-size: cover;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+}
+
 #body {
    padding-top:10px;
    padding-bottom:30px;   /* Height of the footer */
