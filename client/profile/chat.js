@@ -25,7 +25,7 @@ Template.input.events = {
 					time: Date.now(),
 				});
 
-				if (message.value.trim().toLowerCase() == answer.trim().toLowerCase()) {
+				if (message.value.trim().toLowerCase().indexOf(answer.trim().toLowerCase()) != -1) {
 					Messages.insert({
 						name: 'Judge Bot',
 						message: 'Well done ' + username + ', you win!!',
