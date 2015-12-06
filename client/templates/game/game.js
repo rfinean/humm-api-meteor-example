@@ -87,7 +87,7 @@ Template.Game.events({
         var done = false;
         onPlayerStateChange = function(event) {
             if (event.data == YT.PlayerState.PLAYING && !done) {
-              setTimeout(stopVideo, 10000);
+              setTimeout(stopVideo, 30000);
               done = true;
             }
         };
