@@ -83,11 +83,11 @@ Template.Game.events({
 
         /* 5. The API calls this function when the player's state changes. */
         /*    The function indicates that when playing a video (state=1), */
-        /*    the player should play for five seconds and then stop. */
+        /*    the player should play for ten seconds and then stop. */
         var done = false;
         onPlayerStateChange = function(event) {
             if (event.data == YT.PlayerState.PLAYING && !done) {
-              setTimeout(stopVideo, 40000);
+              setTimeout(stopVideo, 10000);
               done = true;
             }
         };

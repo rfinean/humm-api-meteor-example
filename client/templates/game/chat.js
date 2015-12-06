@@ -45,7 +45,6 @@ Template.chat.events = {
 					});
 				}
 
-				document.getElementById('message').value = '';
 				message.value = '';
 			}
 	    }
