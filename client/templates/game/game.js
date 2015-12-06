@@ -1,47 +1,42 @@
+Template.Game.onCreated(function() {
 
-Template.profile.onCreated(function () {
-    this.userLoaded = new ReactiveVar(false);
-    this.meViaCode = {};
-    var that = this;
+        var popularSong = Meteor.call('getPopularSong', function(err, data){
+            if (err) {
+                console.log(err);
+            } else {
+                Session.set('popularSong', data);
+            }
 
-    console.log(this.data);
-    Meteor.call('getMe', this.data, function(err, res){
-            that.userLoaded.set(true);
-            that.meViaCode = res.data.data_response;
+        });
 
-            Session.set('currentUser', res.data.data_response);
-            
-    });
+        // Meteor.call('getSongById', '557ecbf86a64fc1b8bed533f', function(err, res) {
+        //     console.log(res);
+        // })
 });
 
 
-
-Template.profile.helpers({
-    userLoaded: function loggedViaCode(){
-        return Template.instance().userLoaded.get();
-    },
-
-    meViaCode: function meViaCode() {
-        return Template.instance().meViaCode;
+Template.Game.helpers({
+    popularSong: function() {
+        console.log(Session.get('popularSong'));
+        return Session.get('popularSong');
     }
-});
+})
 
-Template.profile.events({
+Template.Game.events({
 
     'click #request-song': function requestSong() {
 
-        var popularSong = Meteor.call('getPopularSong');
-        console.log('popularSong', popularSong);
+       var popularSong = Session.get('popularSong');
 
-        var popularSongYouTube = popularSong.url.youtube;
+        var popularSongYouTube = popularSong.foreign_ids.youtube;
         Session.set('popularSongYouTube', popularSongYouTube);
         console.log("popularSongYouTube", popularSongYouTube);
 
-        var popularSongArtist = popularSong.artists.name;
+        var popularSongArtist = popularSong.artists[0].name;
         Session.set('popularSongArtist', popularSongArtist);
         console.log("popularSongArtist", popularSongArtist);
 
-        $("#player").css('visibility', 'hidden');
+        // $("#player").css('visibility', 'hidden');
 
         /* 2. This code loads the IFrame Player API code asynchronously. */
         var tag = document.createElement('script');
@@ -57,7 +52,7 @@ Template.profile.events({
             player = new YT.Player('player', {
               height: '390',
               width: '640',
-              videoId: 'popularSongYouTube',
+              videoId: popularSongYouTube,
               events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -76,7 +71,7 @@ Template.profile.events({
         var done = false;
         onPlayerStateChange = function(event) {
             if (event.data == YT.PlayerState.PLAYING && !done) {
-              setTimeout(stopVideo, 5000);
+              setTimeout(stopVideo, 30000);
               done = true;
             }
         };
@@ -84,10 +79,5 @@ Template.profile.events({
             player.stopVideo();
         };
 
-        // Meteor.call('getSongById', '557ecbf86a64fc1b8bed533f', function(err, res) {
-        //     console.log(res);
-        // })
-
-        console.log('popularSong', popularSong);
     }
 });

@@ -1,0 +1,47 @@
+<template name="Game">
+
+	<div class="game">
+
+		{{#if isLoggedIn}}
+				
+					<div class="row">
+						<br>
+						<br>
+						<br>
+
+
+						<center>
+							<div class="col-md-6 play">
+
+
+						        <button class="btn btn-danger" id="request-song">Get New Song</button>
+
+						        <div id="player" style="color:white;"></div>
+
+
+						        <h1 id="song-playing">Guess the Artist!!</h1>
+
+						        {{> chat }}
+			  					{{> messages }}
+							</div>
+						</center>
+						
+						<center>
+							<div class="col-md-4 results">
+								{{> leaderboard }}
+							</div>
+						</center>
+						<div class="col-md-2">
+						</div>
+
+					</div>
+
+
+			    
+
+		    {{else}}
+		        <center>Please Log In{{> atNavButton}}</center>
+		    {{/if}}
+	</div>
+
+</template>

@@ -1,0 +1,19 @@
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+   font-family: monospace;
+}
+#container {
+   height:100%;
+   position:relative;
+}
+#header {
+   background:#ff0;
+   padding:20px;
+}
+#body {
+   padding-top:10px;
+   padding-bottom:30px;   /* Height of the footer */
+   height: 100%;
+}

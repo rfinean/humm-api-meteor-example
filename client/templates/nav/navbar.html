@@ -1,0 +1,25 @@
+<template name="navbar">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul class="nav navbar-nav">
+          <li style="font-size:30px;">{{#linkTo route="home"}}HummRinger{{/linkTo}}</li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navigationbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>{{#linkTo route="game"}}New Game{{/linkTo}}</li>
+          <li>{{> atNavButton}}</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</template>
