@@ -15,20 +15,23 @@
 
 
 						        <button class="btn btn-danger" id="request-song">Get New Song</button>
-
+						        <h1 id="song-playing">Guess the Artist!!</h1>
+						        {{> leaderboard }}
 						        <div id="player" style="color:white;"></div>
 
 
-						        <h1 id="song-playing">Guess the Artist!!</h1>
+						        
 
-						        {{> chat }}
-			  					{{> messages }}
+						        
 							</div>
 						</center>
 						
 						<center>
 							<div class="col-md-4 results">
-								{{> leaderboard }}
+								
+
+						        {{> chat }}
+			  					{{> messages }}
 							</div>
 						</center>
 						<div class="col-md-2">

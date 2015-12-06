@@ -7,7 +7,7 @@ Meteor.methods({
     },
     'getPopularSong': function (){
         var popularSongs = JSON.parse(Assets.getText('response.json'));
-        var randomSong = Math.floor((Math.random() * 20) + 1);
+        var randomSong = Math.floor((Math.random() * 19) + 1);
         var popularSong = popularSongs.data_response[randomSong];
         console.log('popularSong', popularSong);
         return popularSong;

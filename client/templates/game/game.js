@@ -26,7 +26,23 @@ Template.Game.events({
 
     'click #request-song': function requestSong() {
 
-       var popularSong = Session.get('popularSong');
+        Bert.alert({
+          title: 'Song Now Playing!',
+          type: 'info',
+          style: 'growl-top-right',
+          icon: 'fa-music'
+        });
+
+        var popularSong = Meteor.call('getPopularSong', function(err, data){
+            if (err) {
+                console.log(err);
+            } else {
+                Session.set('popularSong', data);
+            }
+
+        });
+
+        var popularSong = Session.get('popularSong');
 
         var popularSongYouTube = popularSong.foreign_ids.youtube;
         Session.set('popularSongYouTube', popularSongYouTube);
@@ -36,7 +52,7 @@ Template.Game.events({
         Session.set('popularSongArtist', popularSongArtist);
         console.log("popularSongArtist", popularSongArtist);
 
-        // $("#player").css('visibility', 'hidden');
+        $("#player").css('visibility', 'hidden');
 
         /* 2. This code loads the IFrame Player API code asynchronously. */
         var tag = document.createElement('script');
@@ -71,7 +87,7 @@ Template.Game.events({
         var done = false;
         onPlayerStateChange = function(event) {
             if (event.data == YT.PlayerState.PLAYING && !done) {
-              setTimeout(stopVideo, 30000);
+              setTimeout(stopVideo, 40000);
               done = true;
             }
         };
