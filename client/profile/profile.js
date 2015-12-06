@@ -44,15 +44,15 @@ Template.profile.events({
         /*    after the API code downloads. */
         var player;
         onYouTubeIframeAPIReady = function() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'dQw4w9WgXcQ',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
+            player = new YT.Player('player', {
+              height: '390',
+              width: '640',
+              videoId: 'dQw4w9WgXcQ',
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
         };
 
         /* 4. The API will call this function when the video player is ready. */
@@ -62,13 +62,13 @@ Template.profile.events({
 
         /* 5. The API calls this function when the player's state changes. */
         /*    The function indicates that when playing a video (state=1), */
-        /*    the player should play for six seconds and then stop. */
+        /*    the player should play for five seconds and then stop. */
         var done = false;
         onPlayerStateChange = function(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 10000);
-          done = true;
-        }
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+              setTimeout(stopVideo, 5000);
+              done = true;
+            }
         };
         stopVideo = function() {
             player.stopVideo();
