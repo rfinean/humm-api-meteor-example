@@ -26,3 +26,5 @@ reactive-var
 humm:humm
 twbs:bootstrap
 http
+momentjs:moment
+mrt:twilio-meteor
