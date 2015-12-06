@@ -8,6 +8,9 @@ iron:router
 aldeed:autoform
 aldeed:collection2
 twbs:bootstrap
+http
+momentjs:moment
+mrt:twilio-meteor
 aldeed:delete-button
 useraccounts:bootstrap
 accounts-password
