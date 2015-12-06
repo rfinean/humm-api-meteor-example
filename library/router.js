@@ -12,13 +12,9 @@ Router.route('/complete-auth', {
 });
 
 Router.route('/profile/:_id', {
-    action: function () {
-        this.render('profile');
-    },
-    data: function(){
-        var userID = this.params._id;
-        return userID;
-    },
+    action: function () { this.render('profile'); },
+    onBeforeAction: function () { if (this.params._id) this.next(); },
+    data: function(){ var userID = this.params._id; return userID; },
     name: 'profile'
 });
 
