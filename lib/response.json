@@ -1,0 +1,225 @@
+{
+  "status_response": "ok",
+  "data_response": [
+    {
+      "_id": "557ec8126a64fc1b8bed19cf",
+      "title": "Ariana Grande - One Last Time (Official)",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=BPgEgaPk62M"
+      },
+      "foreign_ids": {
+        "youtube": "BPgEgaPk62M"
+      },
+      "stats": {
+        "popularity": "7585850360518750805",
+        "playlists": 1264
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "5511686cf9c816a0d639e62e",
+          "name": "Ariana Grande",
+          "avatar": "https://i.ytimg.com/i/0076UMUgEng8HORUw_MYHA/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "558d7b1d6a64fc1b8b03bd2a",
+      "title": "Ellie Goulding - Love Me Like You Do (Official Video)",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=AJtDXIazrMo"
+      },
+      "foreign_ids": {
+        "youtube": "AJtDXIazrMo"
+      },
+      "stats": {
+        "popularity": "7554880763339010782",
+        "playlists": 1477
+      },
+      "type": "video",
+      "artists": [
+        {
+          "uid": "5511691cf9c816a0d639e8db",
+          "name": "Ellie Goulding",
+          "avatar": "https://i.ytimg.com/i/ZSxBlUEOKgXkzaj_VlBLlg/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "55d35cff8aab5b62b61efbe2",
+      "title": "Demi Lovato - Cool for the Summer (Official Video)",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=il9nqWw9W3Y"
+      },
+      "foreign_ids": {
+        "youtube": "il9nqWw9W3Y"
+      },
+      "stats": {
+        "popularity": "7554880763339010782",
+        "playlists": 1703
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "55a9037c6a64fc1b8b2ae8be",
+          "name": "Musique",
+          "avatar": "https://i.ytimg.com/i/-9-kyTW8ZkZNDHQJ6FgpwQ/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "55d35cff8aab5b62b61efbde",
+      "title": "Selena Gomez - Good For You",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=1TsVjvEkc4s"
+      },
+      "foreign_ids": {
+        "youtube": "1TsVjvEkc4s"
+      },
+      "stats": {
+        "popularity": "7554880763339010782",
+        "playlists": 1753
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "55a9037c6a64fc1b8b2ae8be",
+          "name": "Musique",
+          "avatar": "https://i.ytimg.com/i/-9-kyTW8ZkZNDHQJ6FgpwQ/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "557ec8126a64fc1b8bed19c2",
+      "title": "Fifth Harmony - Worth It ft. Kid Ink",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=YBHQbu5rbdQ"
+      },
+      "foreign_ids": {
+        "youtube": "YBHQbu5rbdQ"
+      },
+      "stats": {
+        "popularity": "1993243184952086988",
+        "playlists": 1706
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "55116924f9c816a0d639e8f1",
+          "name": "Fifth Harmony",
+          "avatar": "https://i.ytimg.com/i/i2n9JX7IVkdhqDjzjpUVnA/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "558dabfa6a64fc1b8b04ea57",
+      "title": "Adele - Skyfall (Lyric Video)",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=DeumyOzKqgI"
+      },
+      "foreign_ids": {
+        "youtube": "DeumyOzKqgI"
+      },
+      "stats": {
+        "popularity": "1516341085497881310",
+        "playlists": 1121
+      },
+      "type": "video",
+      "artists": [
+        {
+          "uid": "55118f9df9c816a0d639f3ea",
+          "name": "Adele",
+          "avatar": "https://i.ytimg.com/i/Rw0x9_EfawqmgDI2IgQLLg/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "558dbf9c6a64fc1b8b05aa1b",
+      "title": "Flo Rida ft. Robin Thicke & Verdine White - I Don’t Like It, I Love It [Official Video]",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=Tw8mpgccugc"
+      },
+      "foreign_ids": {
+        "youtube": "Tw8mpgccugc"
+      },
+      "stats": {
+        "popularity": "1516341085497881310",
+        "playlists": 1225
+      },
+      "type": "video",
+      "artists": [
+        {
+          "uid": "5511a05af9c816a0d639fc4f",
+          "name": "Robin Thicke",
+          "avatar": "https://i.ytimg.com/i/yYnxJIyBDCIkDIpE7lsUkw/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "557ec8166a64fc1b8bed1a02",
+      "title": "WALK THE MOON - Shut Up and Dance",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=6JCLY0Rlx6Q"
+      },
+      "foreign_ids": {
+        "youtube": "6JCLY0Rlx6Q"
+      },
+      "stats": {
+        "popularity": "1516341085497881310",
+        "playlists": 1273
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "5511950ef9c816a0d639f87a",
+          "name": "Walk the Moon",
+          "avatar": "https://i.ytimg.com/i/3zDBc-LGuLP4WXe0JPn8ag/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "557ec83d6a64fc1b8bed1cbf",
+      "title": "Adele - Someone Like You",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=hLQl3WQQoQ0"
+      },
+      "foreign_ids": {
+        "youtube": "hLQl3WQQoQ0"
+      },
+      "stats": {
+        "popularity": "1516341085497881310",
+        "playlists": 1278
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "55118f9df9c816a0d639f3ea",
+          "name": "Adele",
+          "avatar": "https://i.ytimg.com/i/Rw0x9_EfawqmgDI2IgQLLg/mq1.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "55d35cff8aab5b62b61efbdc",
+      "title": "Ciara - Dance Like We're Making Love",
+      "urls": {
+        "youtube": "https://www.youtube.com/watch?v=Fw_crqWYBCM"
+      },
+      "foreign_ids": {
+        "youtube": "Fw_crqWYBCM"
+      },
+      "stats": {
+        "popularity": "1516341085497881310",
+        "playlists": 1279
+      },
+      "type": "track",
+      "artists": [
+        {
+          "uid": "55a9037c6a64fc1b8b2ae8be",
+          "name": "Musique",
+          "avatar": "https://i.ytimg.com/i/-9-kyTW8ZkZNDHQJ6FgpwQ/mq1.jpg"
+        }
+      ]
+    }
+  ]
+}

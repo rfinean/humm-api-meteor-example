@@ -30,7 +30,17 @@ Template.profile.events({
 
     'click #request-song': function requestSong() {
 
-        $("#request-song").css('visibility', 'hidden');
+        var popularSong = Meteor.call('getPopularSong');
+        console.log('popularSong', popularSong);
+
+        var popularSongYouTube = popularSong.url.youtube;
+        Session.set('popularSongYouTube', popularSongYouTube);
+        console.log("popularSongYouTube", popularSongYouTube);
+
+        var popularSongArtist = popularSong.artists.name;
+        Session.set('popularSongArtist', popularSongArtist);
+        console.log("popularSongArtist", popularSongArtist);
+
         $("#player").css('visibility', 'hidden');
 
         /* 2. This code loads the IFrame Player API code asynchronously. */
@@ -47,7 +57,7 @@ Template.profile.events({
             player = new YT.Player('player', {
               height: '390',
               width: '640',
-              videoId: 'dQw4w9WgXcQ',
+              videoId: 'popularSongYouTube',
               events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -77,5 +87,7 @@ Template.profile.events({
         // Meteor.call('getSongById', '557ecbf86a64fc1b8bed533f', function(err, res) {
         //     console.log(res);
         // })
+
+        console.log('popularSong', popularSong);
     }
 });

@@ -25,3 +25,4 @@ iron:router
 reactive-var
 humm:humm
 twbs:bootstrap
+http

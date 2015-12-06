@@ -1,3 +1,4 @@
+
 Meteor.methods({
 
     'removeMessages': function (){
@@ -18,6 +19,14 @@ Meteor.methods({
     'getMe': function (token){
         humm.setAccessToken(token);
         return humm.users.me();
+    },
+
+    'getPopularSong': function (){
+        var popularSongs = JSON.parse(Assets.getText('response.json'));
+        var randomSong = Math.floor((Math.random() * 20) + 1);
+        var popularSong = popularSongs.data_response[randomSong];
+        console.log('popularSong', popularSong);
+        return popularSong;
     },
 
     'getSongById': function (songID){
